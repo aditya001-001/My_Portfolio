@@ -1,0 +1,153 @@
+{
+  "personalInfo": {
+    "name": "Aditya Chidanand Sarapure",
+    "firstName": "Aditya",
+    "headline": "Artificial Intelligence & Data Science Graduate | Machine Learning | Python | RAG | Data Analysis",
+    "email": "adityasarapure100@gmail.com",
+    "github": "https://github.com/aditya001-001",
+    "linkedin": "https://www.linkedin.com/in/aditya-sarapure-607593282",
+    "objective": "Build a clean, professional portfolio that showcases my machine learning projects, technical skills, education, certifications, and GitHub work. The design should emphasize simplicity, clarity, and craftsmanship.",
+    "description": "I enjoy building practical machine learning applications using Python, Scikit-learn, Retrieval-Augmented Generation (RAG), LangChain, and data analysis techniques. I'm looking for opportunities to contribute to real-world AI and data-driven products while continuing to grow as a Machine Learning Engineer."
+  },
+  "about": [
+    "Artificial Intelligence & Data Science graduate.",
+    "Strong foundation in Python, machine learning, exploratory data analysis, data cleaning, preprocessing, feature engineering.",
+    "Hands-on experience with recommendation systems and Retrieval-Augmented Generation (RAG).",
+    "Comfortable with Git, GitHub, SQL, Jupyter Notebook, VS Code, Google Colab, Power BI.",
+    "Looking for entry-level Machine Learning / Data Science opportunities."
+  ],
+  "skills": {
+    "Programming": ["Python"],
+    "Machine Learning": ["Scikit-learn", "Model Development", "Feature Engineering"],
+    "Data Analysis": ["Pandas", "NumPy", "EDA", "Data Cleaning", "Data Preprocessing"],
+    "Generative AI": ["LangChain", "RAG", "HuggingFace Embeddings", "FAISS"],
+    "Visualization": ["Matplotlib", "Power BI"],
+    "Database": ["SQL"],
+    "Tools": ["Git", "GitHub", "VS Code", "Jupyter Notebook", "Google Colab"]
+  },
+  "projects": [
+    {
+      "id": "movie-recommendation",
+      "title": "Movie Recommendation System",
+      "highlights": ["Content-Based Recommendation", "TMDB Dataset", "Cosine Similarity", "Streamlit UI", "Feature Engineering"],
+      "githubUrl": "https://github.com/aditya001-001/MOVIE_RECOMMENDATION_SYSTEM",
+      "problem": "With thousands of movies available online, users struggle to find relevant titles that match their specific tastes, leading to choice paralysis.",
+      "solution": "Developed a content-based movie recommender system that analyzes movie metadata (genres, keywords, cast, crew, overview) to calculate text vector similarities and recommend the top 5 most relevant films.",
+      "workflow": [
+        "Ingested TMDB 5000 movies and credits datasets.",
+        "Performed data cleaning and text feature extraction (converting list strings to list arrays).",
+        "Applied NLTK PorterStemmer to normalize words in tags.",
+        "Converted processed text tags to high-dimensional vectors using CountVectorizer.",
+        "Calculated pairwise cosine similarities between all movie vectors.",
+        "Built a Streamlit frontend that fetches movie posters in real-time using TMDb API."
+      ],
+      "techStack": ["Python", "Scikit-learn", "Pandas", "NumPy", "NLTK", "Streamlit", "TMDb API", "Pickle"],
+      "features": [
+        "Interactive movie selection dropdown interface.",
+        "Real-time visual recommendations with high-quality movie posters.",
+        "Graceful API fallback handling for missing poster images.",
+        "Fast, pre-computed similarity matrix lookup."
+      ],
+      "challenges": [
+        "Handling nested, dirty, string-formatted JSON data inside TMDB columns (cast, crew, genres).",
+        "Optimizing performance to read and load a large pickled similarity matrix file (~180MB) efficiently."
+      ],
+      "futureImprovements": [
+        "Adding Collaborative Filtering using user ratings to support hybrid recommendations.",
+        "Deploying the system to the cloud (Streamlit Share or Heroku).",
+        "Caching poster requests to reduce external TMDb API dependencies."
+      ]
+    },
+    {
+      "id": "youtube-rag-chatbot",
+      "title": "YouTube Video RAG Chatbot",
+      "highlights": ["LangChain", "FAISS Vector Store", "HuggingFace Embeddings", "Gemini AI", "Retrieval-Augmented Generation", "Semantic Search"],
+      "githubUrl": "https://github.com/aditya001-001/youtube-rag-chatbot",
+      "problem": "Extracting key insights or getting specific answers from long video lectures and tutorials is time-consuming and inefficient.",
+      "solution": "Built a Retrieval-Augmented Generation (RAG) based Question Answering system that extracts YouTube transcripts, creates vector indices, and feeds relevant video context to Google's Gemini model to produce highly accurate, context-bound responses.",
+      "workflow": [
+        "Extracted transcripts from YouTube videos using YouTubeTranscriptApi.",
+        "Segmented the transcript into semantic text chunks using RecursiveCharacterTextSplitter (chunk_size=1000, chunk_overlap=200).",
+        "Generated text vector embeddings using HuggingFace's sentence-transformers/all-MiniLM-L6-v2 model.",
+        "Indexed and stored embeddings locally in a FAISS vector database.",
+        "Retrieved the top k=4 most relevant chunks matching the user's query.",
+        "Augmented a strict prompt template with retrieved context and user query.",
+        "Passed the prompt to ChatGoogleGenerativeAI (gemini-2.5-flash) to generate answers constrained strictly to the context."
+      ],
+      "techStack": ["Python", "LangChain", "FAISS", "HuggingFace Embeddings", "Google Gemini API", "YouTube Transcript API", "Dotenv"],
+      "features": [
+        "Direct transcript download using only a YouTube Video ID.",
+        "Dense vector semantic search capable of handling conceptual questions.",
+        "Context-bound guardrails preventing LLM hallucinations.",
+        "Modular chain pipeline using LangChain Expression Language (LCEL)."
+      ],
+      "challenges": [
+        "Handling video transcripts that are disabled or unavailable in English.",
+        "Tuning chunk size and chunk overlap parameters to balance contextual relevance with prompt token limits."
+      ],
+      "futureImprovements": [
+        "Creating a custom Streamlit dashboard UI for user inputs.",
+        "Adding conversation memory (history) for multi-turn chats.",
+        "Supporting source-highlighting and timestamps for retrieved video segments."
+      ]
+    }
+  ],
+  "learningJourney": [
+    {
+      "repo": "Python",
+      "description": "Fundamental and advanced python learning covering Object-Oriented Programming, libraries, and logic structures.",
+      "githubUrl": "https://github.com/aditya001-001/Python"
+    },
+    {
+      "repo": "Machine-learning",
+      "description": "Comprehensive practice notebooks representing algorithms, model parameters, and feature engineering experiments.",
+      "githubUrl": "https://github.com/aditya001-001/Machine-learning"
+    },
+    {
+      "repo": "Pyspark",
+      "description": "Distributed data analytics and processing workflows using PySpark on Big Data (e.g. Titanic dataset analysis).",
+      "githubUrl": "https://github.com/aditya001-001/Pyspark"
+    },
+    {
+      "repo": "Web_Scraping",
+      "description": "Data harvesting pipelines using BeautifulSoup and Selenium to extract information from public websites.",
+      "githubUrl": "https://github.com/aditya001-001/Web_Scraping"
+    }
+  ],
+  "certificates": [
+    {
+      "title": "Oracle Cloud Infrastructure 2025 Certified Data Science Professional",
+      "issuer": "Oracle University",
+      "date": "2025",
+      "pdfPath": "oracle_data_science_certificate.pdf"
+    },
+    {
+      "title": "Artificial Intelligence A-Z",
+      "issuer": "Udemy",
+      "date": "2025",
+      "pdfPath": "udemy_ai_certificate.pdf"
+    },
+    {
+      "title": "Python with Data Science",
+      "issuer": "PySpiders",
+      "date": "2025",
+      "pdfPath": "pyspiders_certificate.pdf"
+    }
+  ],
+  "education": {
+    "be": {
+      "degree": "Bachelor of Engineering in Artificial Intelligence & Data Science",
+      "institution": "KLE College of Engineering & Technology",
+      "year": "2026",
+      "score": "82%"
+    },
+    "puc": {
+      "degree": "Pre-University Course (PUC)",
+      "score": "80.6%"
+    },
+    "sslc": {
+      "degree": "Secondary School Leaving Certificate (SSLC)",
+      "score": "73%"
+    }
+  }
+}
