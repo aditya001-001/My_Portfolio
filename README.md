@@ -61,6 +61,7 @@ My_Portfolio/
 │   ├── 01_Aditya_Sarapure.pdf
 │   ├── oracle_data_science_certificate.pdf
 │   ├── Udemy_AI.pdf
+│   ├── Pyspider_DS.pdf
 │   ├── robots.txt
 │   └── sitemap.xml
 │
