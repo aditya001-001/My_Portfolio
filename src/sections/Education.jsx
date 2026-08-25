@@ -60,7 +60,7 @@ export default function Education({ education }) {
             {/* Score Display Badge */}
             <div className="mt-8 pt-6 border-t border-apple-gray-50 flex items-center justify-between">
               <span className="text-xs uppercase tracking-wider text-apple-gray font-semibold">Cumulative Score</span>
-              <span className="text-2xl font-extrabold text-apple-blue">{education.be.score} CGPA / Percentage</span>
+              <span className="text-2xl font-extrabold text-apple-blue">{education.be.score} CGPA</span>
             </div>
           </motion.div>
 
