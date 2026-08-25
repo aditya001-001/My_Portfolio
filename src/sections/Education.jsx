@@ -39,7 +39,7 @@ export default function Education({ education }) {
                   <GraduationCap size={24} />
                 </div>
                 <div>
-                  <span className="text-xs text-apple-blue font-semibold tracking-wider uppercase">Undergraduate Degree</span>
+                  <span className="text-xs text-apple-blue font-semibold tracking-wider uppercase">Graduated</span>
                   <h3 className="text-xl font-bold text-apple-black tracking-tight mt-0.5">{education.be.degree}</h3>
                 </div>
               </div>
