@@ -17,19 +17,53 @@
     "Looking for entry-level Machine Learning / Data Science opportunities."
   ],
   "skills": {
-    "Programming": ["Python"],
-    "Machine Learning": ["Scikit-learn", "Model Development", "Feature Engineering"],
-    "Data Analysis": ["Pandas", "NumPy", "EDA", "Data Cleaning", "Data Preprocessing"],
-    "Generative AI": ["LangChain", "RAG", "HuggingFace Embeddings", "FAISS"],
-    "Visualization": ["Matplotlib", "Power BI"],
-    "Database": ["SQL"],
-    "Tools": ["Git", "GitHub", "VS Code", "Jupyter Notebook", "Google Colab"]
+    "Programming": [
+      "Python"
+    ],
+    "Machine Learning": [
+      "Scikit-learn",
+      "Model Development",
+      "Feature Engineering"
+    ],
+    "Data Analysis": [
+      "Pandas",
+      "NumPy",
+      "EDA",
+      "Data Cleaning",
+      "Data Preprocessing"
+    ],
+    "Generative AI": [
+      "LangChain",
+      "RAG",
+      "HuggingFace Embeddings",
+      "FAISS"
+    ],
+    "Visualization": [
+      "Matplotlib",
+      "Power BI"
+    ],
+    "Database": [
+      "SQL"
+    ],
+    "Tools": [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Jupyter Notebook",
+      "Google Colab"
+    ]
   },
   "projects": [
     {
       "id": "movie-recommendation",
       "title": "Movie Recommendation System",
-      "highlights": ["Content-Based Recommendation", "TMDB Dataset", "Cosine Similarity", "Streamlit UI", "Feature Engineering"],
+      "highlights": [
+        "Content-Based Recommendation",
+        "TMDB Dataset",
+        "Cosine Similarity",
+        "Streamlit UI",
+        "Feature Engineering"
+      ],
       "githubUrl": "https://github.com/aditya001-001/MOVIE_RECOMMENDATION_SYSTEM",
       "problem": "With thousands of movies available online, users struggle to find relevant titles that match their specific tastes, leading to choice paralysis.",
       "solution": "Developed a content-based movie recommender system that analyzes movie metadata (genres, keywords, cast, crew, overview) to calculate text vector similarities and recommend the top 5 most relevant films.",
@@ -41,7 +75,16 @@
         "Calculated pairwise cosine similarities between all movie vectors.",
         "Built a Streamlit frontend that fetches movie posters in real-time using TMDb API."
       ],
-      "techStack": ["Python", "Scikit-learn", "Pandas", "NumPy", "NLTK", "Streamlit", "TMDb API", "Pickle"],
+      "techStack": [
+        "Python",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "NLTK",
+        "Streamlit",
+        "TMDb API",
+        "Pickle"
+      ],
       "features": [
         "Interactive movie selection dropdown interface.",
         "Real-time visual recommendations with high-quality movie posters.",
@@ -61,7 +104,14 @@
     {
       "id": "youtube-rag-chatbot",
       "title": "YouTube Video RAG Chatbot",
-      "highlights": ["LangChain", "FAISS Vector Store", "HuggingFace Embeddings", "Gemini AI", "Retrieval-Augmented Generation", "Semantic Search"],
+      "highlights": [
+        "LangChain",
+        "FAISS Vector Store",
+        "HuggingFace Embeddings",
+        "Gemini AI",
+        "Retrieval-Augmented Generation",
+        "Semantic Search"
+      ],
       "githubUrl": "https://github.com/aditya001-001/youtube-rag-chatbot",
       "problem": "Extracting key insights or getting specific answers from long video lectures and tutorials is time-consuming and inefficient.",
       "solution": "Built a Retrieval-Augmented Generation (RAG) based Question Answering system that extracts YouTube transcripts, creates vector indices, and feeds relevant video context to Google's Gemini model to produce highly accurate, context-bound responses.",
@@ -74,7 +124,15 @@
         "Augmented a strict prompt template with retrieved context and user query.",
         "Passed the prompt to ChatGoogleGenerativeAI (gemini-2.5-flash) to generate answers constrained strictly to the context."
       ],
-      "techStack": ["Python", "LangChain", "FAISS", "HuggingFace Embeddings", "Google Gemini API", "YouTube Transcript API", "Dotenv"],
+      "techStack": [
+        "Python",
+        "LangChain",
+        "FAISS",
+        "HuggingFace Embeddings",
+        "Google Gemini API",
+        "YouTube Transcript API",
+        "Dotenv"
+      ],
       "features": [
         "Direct transcript download using only a YouTube Video ID.",
         "Dense vector semantic search capable of handling conceptual questions.",
@@ -130,7 +188,7 @@
     {
       "title": "Python with Data Science",
       "issuer": "PySpiders",
-      "date": "2025",
+      "date": "2026",
       "pdfPath": "Pyspider_DS.pdf"
     }
   ],
