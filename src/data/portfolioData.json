@@ -4,48 +4,47 @@
     "firstName": "Aditya",
     "headline": "Artificial Intelligence & Data Science Graduate | Machine Learning | Python | RAG | Data Analysis",
     "email": "adityasarapure100@gmail.com",
+    "phone": "+91 8618766992",
     "github": "https://github.com/aditya001-001",
     "linkedin": "https://www.linkedin.com/in/aditya-sarapure-607593282",
+    "resumePdf": "01_Aditya_Sarapure.pdf",
     "objective": "Build a clean, professional portfolio that showcases my machine learning projects, technical skills, education, certifications, and GitHub work. The design should emphasize simplicity, clarity, and craftsmanship.",
-    "description": "I enjoy building practical machine learning applications using Python, Scikit-learn, Retrieval-Augmented Generation (RAG), LangChain, and data analysis techniques. I'm looking for opportunities to contribute to real-world AI and data-driven products while continuing to grow as a Machine Learning Engineer."
+    "description": "AI & Data Science graduate with a strong foundation in Python, SQL, Machine Learning, Data Analysis, and EDA. Skilled in data preprocessing, feature engineering, Pandas, and NumPy, with hands-on experience building ML models, RAG systems, and recommendation engines. Seeking entry-level opportunities in Data Science, Machine Learning, Data Analytics, or Data Engineering."
   },
   "about": [
-    "Artificial Intelligence & Data Science graduate.",
-    "Strong foundation in Python, machine learning, exploratory data analysis, data cleaning, preprocessing, feature engineering.",
-    "Hands-on experience with recommendation systems and Retrieval-Augmented Generation (RAG).",
-    "Comfortable with Git, GitHub, SQL, Jupyter Notebook, VS Code, Google Colab, Power BI.",
-    "Looking for entry-level Machine Learning / Data Science opportunities."
+    "Artificial Intelligence & Data Science graduate with a strong foundation in Python, SQL, Machine Learning, Data Analysis, and EDA.",
+    "Skilled in data preprocessing, feature engineering, Pandas, and NumPy with hands-on ML model development.",
+    "Hands-on experience building context-aware RAG pipelines and content-based recommendation engines.",
+    "Comfortable with Git, GitHub, SQL, VS Code, Jupyter Notebook, and Google Colab.",
+    "Seeking entry-level opportunities in Data Science, Machine Learning, Data Analytics, or Data Engineering."
   ],
   "skills": {
-    "Programming": [
+    "Programming Languages": [
       "Python"
+    ],
+    "Data Manipulation & Analysis": [
+      "Pandas",
+      "NumPy",
+      "Exploratory Data Analysis (EDA)",
+      "Data Cleaning",
+      "Data Preprocessing",
+      "Feature Engineering"
     ],
     "Machine Learning": [
       "Scikit-learn",
-      "Model Development",
-      "Feature Engineering"
-    ],
-    "Data Analysis": [
-      "Pandas",
-      "NumPy",
-      "EDA",
-      "Data Cleaning",
-      "Data Preprocessing"
+      "Machine Learning Model Development"
     ],
     "Generative AI": [
       "LangChain",
       "RAG",
+      "FAISS",
       "HuggingFace Embeddings",
-      "FAISS"
+      "Gemini AI"
     ],
-    "Visualization": [
-      "Matplotlib",
-      "Power BI"
-    ],
-    "Database": [
+    "Databases": [
       "SQL"
     ],
-    "Tools": [
+    "Tools & Platforms": [
       "Git",
       "GitHub",
       "VS Code",
@@ -54,53 +53,6 @@
     ]
   },
   "projects": [
-    {
-      "id": "movie-recommendation",
-      "title": "Movie Recommendation System",
-      "highlights": [
-        "Content-Based Recommendation",
-        "TMDB Dataset",
-        "Cosine Similarity",
-        "Streamlit UI",
-        "Feature Engineering"
-      ],
-      "githubUrl": "https://github.com/aditya001-001/MOVIE_RECOMMENDATION_SYSTEM",
-      "problem": "With thousands of movies available online, users struggle to find relevant titles that match their specific tastes, leading to choice paralysis.",
-      "solution": "Developed a content-based movie recommender system that analyzes movie metadata (genres, keywords, cast, crew, overview) to calculate text vector similarities and recommend the top 5 most relevant films.",
-      "workflow": [
-        "Ingested TMDB 5000 movies and credits datasets.",
-        "Performed data cleaning and text feature extraction (converting list strings to list arrays).",
-        "Applied NLTK PorterStemmer to normalize words in tags.",
-        "Converted processed text tags to high-dimensional vectors using CountVectorizer.",
-        "Calculated pairwise cosine similarities between all movie vectors.",
-        "Built a Streamlit frontend that fetches movie posters in real-time using TMDb API."
-      ],
-      "techStack": [
-        "Python",
-        "Scikit-learn",
-        "Pandas",
-        "NumPy",
-        "NLTK",
-        "Streamlit",
-        "TMDb API",
-        "Pickle"
-      ],
-      "features": [
-        "Interactive movie selection dropdown interface.",
-        "Real-time visual recommendations with high-quality movie posters.",
-        "Graceful API fallback handling for missing poster images.",
-        "Fast, pre-computed similarity matrix lookup."
-      ],
-      "challenges": [
-        "Handling nested, dirty, string-formatted JSON data inside TMDB columns (cast, crew, genres).",
-        "Optimizing performance to read and load a large pickled similarity matrix file (~180MB) efficiently."
-      ],
-      "futureImprovements": [
-        "Adding Collaborative Filtering using user ratings to support hybrid recommendations.",
-        "Deploying the system to the cloud (Streamlit Share or Heroku).",
-        "Caching poster requests to reduce external TMDb API dependencies."
-      ]
-    },
     {
       "id": "youtube-rag-chatbot",
       "title": "YouTube Video RAG Chatbot",
@@ -116,37 +68,72 @@
       "problem": "Extracting key insights or getting specific answers from long video lectures and tutorials is time-consuming and inefficient.",
       "solution": "Built a Retrieval-Augmented Generation (RAG) based Question Answering system that extracts YouTube transcripts, creates vector indices, and feeds relevant video context to Google's Gemini model to produce highly accurate, context-bound responses.",
       "workflow": [
-        "Extracted transcripts from YouTube videos using YouTubeTranscriptApi.",
-        "Segmented the transcript into semantic text chunks using RecursiveCharacterTextSplitter (chunk_size=1000, chunk_overlap=200).",
-        "Generated text vector embeddings using HuggingFace's sentence-transformers/all-MiniLM-L6-v2 model.",
-        "Indexed and stored embeddings locally in a FAISS vector database.",
-        "Retrieved the top k=4 most relevant chunks matching the user's query.",
-        "Augmented a strict prompt template with retrieved context and user query.",
-        "Passed the prompt to ChatGoogleGenerativeAI (gemini-2.5-flash) to generate answers constrained strictly to the context."
+        "Engineered a Retrieval-Augmented Generation (RAG) pipeline using LangChain, FAISS, HuggingFace Embeddings, and Gemini AI to support context-aware question answering.",
+        "Performed data collection and preprocessing of YouTube transcripts, generating vector embeddings and implementing semantic search for accurate information retrieval.",
+        "Integrated retrieval and LLM-based generation techniques to deliver reliable, context-relevant responses, improving insight extraction from unstructured data."
       ],
       "techStack": [
         "Python",
         "LangChain",
         "FAISS",
         "HuggingFace Embeddings",
-        "Google Gemini API",
-        "YouTube Transcript API",
-        "Dotenv"
+        "Gemini AI",
+        "YouTube Transcript API"
       ],
       "features": [
         "Direct transcript download using only a YouTube Video ID.",
         "Dense vector semantic search capable of handling conceptual questions.",
         "Context-bound guardrails preventing LLM hallucinations.",
-        "Modular chain pipeline using LangChain Expression Language (LCEL)."
+        "Modular chain pipeline using LangChain and FAISS vector indexing."
       ],
       "challenges": [
-        "Handling video transcripts that are disabled or unavailable in English.",
-        "Tuning chunk size and chunk overlap parameters to balance contextual relevance with prompt token limits."
+        "Handling transcripts with variable formatting and multi-speaker segments.",
+        "Tuning chunk size and embeddings to balance context recall with latency."
       ],
       "futureImprovements": [
-        "Creating a custom Streamlit dashboard UI for user inputs.",
-        "Adding conversation memory (history) for multi-turn chats.",
-        "Supporting source-highlighting and timestamps for retrieved video segments."
+        "Adding interactive UI with source timestamp citations.",
+        "Multi-turn conversation memory for continuous Q&A."
+      ]
+    },
+    {
+      "id": "movie-recommendation",
+      "title": "Movie Recommendation System",
+      "highlights": [
+        "Content-Based Recommendation",
+        "Cosine Similarity",
+        "Feature Engineering",
+        "Streamlit UI",
+        "TMDb API"
+      ],
+      "githubUrl": "https://github.com/aditya001-001/MOVIE_RECOMMENDATION_SYSTEM",
+      "problem": "With thousands of movies available online, users struggle to find relevant titles that match their specific tastes, leading to choice paralysis.",
+      "solution": "Built a content-based machine learning recommendation model using cosine similarity and feature engineering on the TMDb movie dataset, deployed via an interactive Streamlit UI.",
+      "workflow": [
+        "Built a content-based machine learning recommendation model using cosine similarity and feature engineering on the TMDb movie dataset.",
+        "Conducted exploratory data analysis (EDA) and data cleaning on movie metadata to identify patterns and improve recommendation accuracy.",
+        "Developed an interactive Streamlit application integrated with the TMDb API for dynamic data retrieval and presentation."
+      ],
+      "techStack": [
+        "Python",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Streamlit",
+        "TMDb API"
+      ],
+      "features": [
+        "Interactive movie selection interface with instant similarity ranking.",
+        "Dynamic poster visualization using live TMDb API queries.",
+        "Robust data cleaning and metadata preprocessing pipeline.",
+        "Fast content-based matching using cosine similarity."
+      ],
+      "challenges": [
+        "Handling nested, dirty, string-formatted JSON data inside TMDB columns.",
+        "Optimizing similarity computation across large feature matrices."
+      ],
+      "futureImprovements": [
+        "Hybrid recommendation combining content-based and collaborative filtering.",
+        "User rating feedback loop for personalized score adjustments."
       ]
     }
   ],
@@ -174,38 +161,46 @@
   ],
   "certificates": [
     {
+      "title": "Artificial Intelligence A–Z 2025: Agentic AI, Generative AI, and Reinforcement Learning",
+      "issuer": "Udemy",
+      "date": "2025",
+      "pdfPath": "Udemy_AI.pdf"
+    },
+    {
       "title": "Oracle Cloud Infrastructure 2025 Certified Data Science Professional",
       "issuer": "Oracle University",
       "date": "2025",
       "pdfPath": "oracle_data_science_certificate.pdf"
     },
     {
-      "title": "Artificial Intelligence A-Z",
-      "issuer": "Udemy",
-      "date": "2025",
-      "pdfPath": "Udemy_AI.pdf"
-    },
-    {
-      "title": "Python with Data Science",
-      "issuer": "PySpiders",
+      "title": "Python with Data Science Course",
+      "issuer": "PySpiders, Bengaluru, BTM",
       "date": "2026",
       "pdfPath": "Pyspider_DS.pdf"
     }
   ],
   "education": {
     "be": {
-      "degree": "Bachelor of Engineering in Artificial Intelligence & Data Science",
-      "institution": "KLE College of Engineering & Technology",
+      "degree": "Bachelor of Engineering (B.E.), Artificial Intelligence & Data Science",
+      "institution": "KLE CET, Chikodi",
       "year": "2026",
-      "score": "8.2"
+      "score": "82.00%"
     },
     "puc": {
-      "degree": "Pre-University Course (PUC)",
-      "score": "80.6%"
+      "degree": "PUC – Science",
+      "institution": "Govt. PU College, Majallatti",
+      "year": "2022",
+      "score": "80.60%"
     },
     "sslc": {
-      "degree": "Secondary School Leaving Certificate (SSLC)",
-      "score": "73%"
+      "degree": "SSLC",
+      "institution": "S.S.K. Patil English Medium School, Sankeshwar",
+      "year": "2020",
+      "score": "73.00%"
     }
-  }
+  },
+  "hobbies": [
+    "Singing",
+    "Reading Books"
+  ]
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Mail, Github, Linkedin, Phone, ArrowUpRight } from 'lucide-react';
 
 export default function Contact({ personalInfo }) {
   const contactCards = [
@@ -12,6 +12,14 @@ export default function Contact({ personalInfo }) {
       color: 'bg-apple-blue/5 border-apple-blue/10 hover:border-apple-blue/30',
       label: 'Send an email'
     },
+    ...(personalInfo.phone ? [{
+      name: 'Phone',
+      value: personalInfo.phone,
+      href: `tel:${personalInfo.phone.replace(/\s+/g, '')}`,
+      icon: <Phone size={24} className="text-emerald-600" />,
+      color: 'bg-emerald-50 border-emerald-100 hover:border-emerald-300',
+      label: 'Call or WhatsApp'
+    }] : []),
     {
       name: 'LinkedIn',
       value: 'Aditya Sarapure',
@@ -49,7 +57,7 @@ export default function Contact({ personalInfo }) {
 
   return (
     <section id="contact" className="py-20 md:py-28 px-6 bg-apple-gray-50 border-t border-b border-apple-gray-100">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-xs text-apple-gray uppercase font-semibold tracking-wider">Get In Touch</span>
@@ -66,14 +74,14 @@ export default function Contact({ personalInfo }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className={`grid grid-cols-1 ${contactCards.length >= 4 ? 'sm:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-3'} gap-6`}
         >
           {contactCards.map((card) => (
             <motion.a
               key={card.name}
               href={card.href}
-              target={card.name !== 'Email' ? "_blank" : undefined}
-              rel={card.name !== 'Email' ? "noopener noreferrer" : undefined}
+              target={card.name !== 'Email' && card.name !== 'Phone' ? "_blank" : undefined}
+              rel={card.name !== 'Email' && card.name !== 'Phone' ? "noopener noreferrer" : undefined}
               variants={cardVariants}
               className={`bg-white border p-6 rounded-apple shadow-apple-card hover:shadow-apple-hover transition-all duration-300 flex flex-col justify-between text-left group ${card.color}`}
             >

@@ -3,12 +3,16 @@ import { motion } from 'framer-motion';
 import { Code, Cpu, LineChart, MessageSquareCode, Palette, Database, Terminal } from 'lucide-react';
 
 const categoryIcons = {
+  "Programming Languages": <Code size={20} className="text-apple-blue" />,
   "Programming": <Code size={20} className="text-apple-blue" />,
-  "Machine Learning": <Cpu size={20} className="text-purple-500" />,
+  "Data Manipulation & Analysis": <LineChart size={20} className="text-green-500" />,
   "Data Analysis": <LineChart size={20} className="text-green-500" />,
+  "Machine Learning": <Cpu size={20} className="text-purple-500" />,
   "Generative AI": <MessageSquareCode size={20} className="text-pink-500" />,
   "Visualization": <Palette size={20} className="text-orange-500" />,
+  "Databases": <Database size={20} className="text-indigo-500" />,
   "Database": <Database size={20} className="text-indigo-500" />,
+  "Tools & Platforms": <Terminal size={20} className="text-amber-500" />,
   "Tools": <Terminal size={20} className="text-amber-500" />
 };
 
@@ -48,7 +52,7 @@ export default function Skills({ skills }) {
           viewport={{ once: true, margin: '-100px' }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {Object.entries(skills).map(([category, items], idx) => (
+          {Object.entries(skills).map(([category, items]) => (
             <motion.div
               key={category}
               variants={cardVariants}

@@ -60,7 +60,11 @@ export default function Education({ education }) {
             {/* Score Display Badge */}
             <div className="mt-8 pt-6 border-t border-apple-gray-50 flex items-center justify-between">
               <span className="text-xs uppercase tracking-wider text-apple-gray font-semibold">Cumulative Score</span>
-              <span className="text-2xl font-extrabold text-apple-blue">{education.be.score} CGPA</span>
+              <span className="text-2xl font-extrabold text-apple-blue">
+                {education.be.score.includes('%') || education.be.score.includes('CGPA')
+                  ? education.be.score
+                  : `${education.be.score} CGPA`}
+              </span>
             </div>
           </motion.div>
 
@@ -82,6 +86,11 @@ export default function Education({ education }) {
                 <div>
                   <span className="text-xs text-purple-500 font-semibold tracking-wider uppercase">Pre-University (PUC)</span>
                   <h4 className="text-base font-bold text-apple-black mt-1 leading-snug">{education.puc.degree}</h4>
+                  {education.puc.institution && (
+                    <p className="text-xs text-apple-gray font-light mt-1">
+                      {education.puc.institution}{education.puc.year ? ` • ${education.puc.year}` : ''}
+                    </p>
+                  )}
                 </div>
               </div>
               
@@ -106,6 +115,11 @@ export default function Education({ education }) {
                 <div>
                   <span className="text-xs text-green-500 font-semibold tracking-wider uppercase">Secondary School (SSLC)</span>
                   <h4 className="text-base font-bold text-apple-black mt-1 leading-snug">{education.sslc.degree}</h4>
+                  {education.sslc.institution && (
+                    <p className="text-xs text-apple-gray font-light mt-1">
+                      {education.sslc.institution}{education.sslc.year ? ` • ${education.sslc.year}` : ''}
+                    </p>
+                  )}
                 </div>
               </div>
 
