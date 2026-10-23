@@ -9,7 +9,7 @@
     "linkedin": "https://www.linkedin.com/in/aditya-sarapure-607593282",
     "resumePdf": "01_Aditya_Chidanand_Sarapure.pdf",
     "objective": "Build a clean, professional portfolio that showcases my machine learning & deep learning projects, technical skills, education, certifications, and GitHub work. The design should emphasize simplicity, clarity, and craftsmanship.",
-    "description": "AI & Data Science graduate with a strong foundation in Python, Machine Learning, Deep Learning, Computer Vision, and RAG systems. Skilled in transfer learning, model explainability (Grad-CAM), data preprocessing, and EDA, with hands-on experience building clinical diagnostic systems, LLM pipelines, and recommendation engines. Seeking entry-level opportunities in Data Science, Machine Learning, Deep Learning, or AI Engineering."
+    "description": "AI & Data Science graduate with a basic understanding of Python, Machine Learning, Deep Learning, Computer Vision, and RAG systems. Familiar with data preprocessing, exploratory data analysis (EDA), and developing AI/ML projects. Seeking entry-level opportunities in Data Science, Machine Learning, or AI Engineering to apply my skills and gain practical experience. "
   },
   "about": [
     "Artificial Intelligence & Data Science graduate with hands-on expertise in Deep Learning, Computer Vision, Machine Learning, and RAG systems.",
@@ -78,10 +78,22 @@
         "4-Class MRI Diagnosis"
       ],
       "metrics": [
-        { "label": "Test Accuracy", "value": "86.12%" },
-        { "label": "Healthy Recall", "value": "99.00%" },
-        { "label": "Dataset Slices", "value": "7,200 Scans" },
-        { "label": "Explainability", "value": "Grad-CAM Heatmaps" }
+        {
+          "label": "Test Accuracy",
+          "value": "86.12%"
+        },
+        {
+          "label": "Healthy Recall",
+          "value": "99.00%"
+        },
+        {
+          "label": "Dataset Slices",
+          "value": "7,200 Scans"
+        },
+        {
+          "label": "Explainability",
+          "value": "Grad-CAM Heatmaps"
+        }
       ],
       "githubUrl": "https://github.com/aditya001-001/Brain-Tumor-detection",
       "problem": "Brain tumors—including infiltrative Gliomas, dural-based Meningiomas, and sellar Pituitary adenomas—are critical intracranial pathologies requiring rapid, accurate radiological evaluation. While Convolutional Neural Networks achieve impressive diagnostic accuracy, their black-box nature creates a barrier to clinical adoption because clinicians cannot trust predictions without understanding where the algorithm is focusing.",
@@ -133,10 +145,22 @@
         "Semantic Search"
       ],
       "metrics": [
-        { "label": "Architecture", "value": "LangChain RAG" },
-        { "label": "Vector Store", "value": "FAISS Index" },
-        { "label": "LLM Engine", "value": "Gemini AI" },
-        { "label": "Retrieval", "value": "Dense Semantic" }
+        {
+          "label": "Architecture",
+          "value": "LangChain RAG"
+        },
+        {
+          "label": "Vector Store",
+          "value": "FAISS Index"
+        },
+        {
+          "label": "LLM Engine",
+          "value": "Gemini AI"
+        },
+        {
+          "label": "Retrieval",
+          "value": "Dense Semantic"
+        }
       ],
       "githubUrl": "https://github.com/aditya001-001/youtube-rag-chatbot",
       "problem": "Extracting key insights or getting specific answers from long video lectures and tutorials is time-consuming and inefficient.",
@@ -180,10 +204,22 @@
         "TMDb API"
       ],
       "metrics": [
-        { "label": "Model Type", "value": "Content-Based" },
-        { "label": "Similarity Metric", "value": "Cosine Similarity" },
-        { "label": "Data Source", "value": "TMDb 5000 Movies" },
-        { "label": "Interface", "value": "Streamlit App" }
+        {
+          "label": "Model Type",
+          "value": "Content-Based"
+        },
+        {
+          "label": "Similarity Metric",
+          "value": "Cosine Similarity"
+        },
+        {
+          "label": "Data Source",
+          "value": "TMDb 5000 Movies"
+        },
+        {
+          "label": "Interface",
+          "value": "Streamlit App"
+        }
       ],
       "githubUrl": "https://github.com/aditya001-001/MOVIE_RECOMMENDATION_SYSTEM",
       "problem": "With thousands of movies available online, users struggle to find relevant titles that match their specific tastes, leading to choice paralysis.",
