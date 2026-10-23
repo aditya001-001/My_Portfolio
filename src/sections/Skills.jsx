@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Cpu, LineChart, MessageSquareCode, Palette, Database, Terminal } from 'lucide-react';
+import { Code, Cpu, LineChart, MessageSquareCode, Palette, Database, Terminal, Brain } from 'lucide-react';
 
 const categoryIcons = {
   "Programming Languages": <Code size={20} className="text-apple-blue" />,
   "Programming": <Code size={20} className="text-apple-blue" />,
+  "Deep Learning & Computer Vision": <Brain size={20} className="text-rose-500" />,
+  "Deep Learning": <Brain size={20} className="text-rose-500" />,
   "Data Manipulation & Analysis": <LineChart size={20} className="text-green-500" />,
   "Data Analysis": <LineChart size={20} className="text-green-500" />,
   "Machine Learning": <Cpu size={20} className="text-purple-500" />,

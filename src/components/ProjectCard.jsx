@@ -45,9 +45,21 @@ export default function ProjectCard({ project, index }) {
       </div>
 
       {/* Condensed Solution Description */}
-      <p className="text-apple-gray text-base leading-relaxed mb-6 font-light">
+      <p className="text-apple-gray text-base leading-relaxed mb-5 font-light">
         {project.solution}
       </p>
+
+      {/* Metrics / Key Stats Strip (if provided) */}
+      {project.metrics && project.metrics.length > 0 && (
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6 p-3.5 bg-apple-gray-50/80 rounded-apple border border-apple-gray-100">
+          {project.metrics.map((metric, idx) => (
+            <div key={idx} className="flex flex-col">
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-apple-gray">{metric.label}</span>
+              <span className="text-sm md:text-base font-bold text-apple-black mt-0.5">{metric.value}</span>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Toggle Details Button */}
       <button

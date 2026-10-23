@@ -2,25 +2,48 @@
   "personalInfo": {
     "name": "Aditya Chidanand Sarapure",
     "firstName": "Aditya",
-    "headline": "Artificial Intelligence & Data Science Graduate | Machine Learning | Python | RAG | Data Analysis",
+    "headline": "Artificial Intelligence & Data Science Graduate | Deep Learning | Machine Learning | Python | RAG | Computer Vision",
     "email": "adityasarapure100@gmail.com",
     "phone": "+91 8618766992",
     "github": "https://github.com/aditya001-001",
     "linkedin": "https://www.linkedin.com/in/aditya-sarapure-607593282",
-    "resumePdf": "01_Aditya_Sarapure.pdf",
-    "objective": "Build a clean, professional portfolio that showcases my machine learning projects, technical skills, education, certifications, and GitHub work. The design should emphasize simplicity, clarity, and craftsmanship.",
-    "description": "AI & Data Science graduate with a strong foundation in Python, SQL, Machine Learning, Data Analysis, and EDA. Skilled in data preprocessing, feature engineering, Pandas, and NumPy, with hands-on experience building ML models, RAG systems, and recommendation engines. Seeking entry-level opportunities in Data Science, Machine Learning, Data Analytics, or Data Engineering."
+    "resumePdf": "01_Aditya_Chidanand_Sarapure.pdf",
+    "objective": "Build a clean, professional portfolio that showcases my machine learning & deep learning projects, technical skills, education, certifications, and GitHub work. The design should emphasize simplicity, clarity, and craftsmanship.",
+    "description": "AI & Data Science graduate with a strong foundation in Python, Machine Learning, Deep Learning, Computer Vision, and RAG systems. Skilled in transfer learning, model explainability (Grad-CAM), data preprocessing, and EDA, with hands-on experience building clinical diagnostic systems, LLM pipelines, and recommendation engines. Seeking entry-level opportunities in Data Science, Machine Learning, Deep Learning, or AI Engineering."
   },
   "about": [
-    "Artificial Intelligence & Data Science graduate with a strong foundation in Python, SQL, Machine Learning, Data Analysis, and EDA.",
-    "Skilled in data preprocessing, feature engineering, Pandas, and NumPy with hands-on ML model development.",
-    "Hands-on experience building context-aware RAG pipelines and content-based recommendation engines.",
-    "Comfortable with Git, GitHub, SQL, VS Code, Jupyter Notebook, and Google Colab.",
-    "Seeking entry-level opportunities in Data Science, Machine Learning, Data Analytics, or Data Engineering."
+    "Artificial Intelligence & Data Science graduate with hands-on expertise in Deep Learning, Computer Vision, Machine Learning, and RAG systems.",
+    "Engineered clinical deep learning models with MobileNetV2 and Grad-CAM visual explainability for 4-class intracranial MRI diagnosis.",
+    "Skilled in data preprocessing, feature engineering, Pandas, and NumPy with hands-on ML model development and empirical validation.",
+    "Hands-on experience building context-aware RAG pipelines with LangChain and vector databases (FAISS) as well as recommendation engines.",
+    "Proficient with Python, TensorFlow/Keras, Scikit-learn, SQL, Git, Streamlit, and modern AI development workflows.",
+    "Seeking entry-level opportunities in Data Science, Machine Learning, Deep Learning, or AI Engineering."
   ],
   "skills": {
     "Programming Languages": [
       "Python"
+    ],
+    "Deep Learning & Computer Vision": [
+      "TensorFlow / Keras",
+      "MobileNetV2",
+      "Transfer Learning",
+      "Grad-CAM (Explainable AI)",
+      "Computer Vision",
+      "OpenCV",
+      "CNN Architectures"
+    ],
+    "Machine Learning": [
+      "Scikit-learn",
+      "Machine Learning Model Development",
+      "Classification & Regression",
+      "Model Evaluation & Validation"
+    ],
+    "Generative AI": [
+      "LangChain",
+      "RAG",
+      "FAISS",
+      "HuggingFace Embeddings",
+      "Gemini AI"
     ],
     "Data Manipulation & Analysis": [
       "Pandas",
@@ -30,21 +53,11 @@
       "Data Preprocessing",
       "Feature Engineering"
     ],
-    "Machine Learning": [
-      "Scikit-learn",
-      "Machine Learning Model Development"
-    ],
-    "Generative AI": [
-      "LangChain",
-      "RAG",
-      "FAISS",
-      "HuggingFace Embeddings",
-      "Gemini AI"
-    ],
     "Databases": [
       "SQL"
     ],
     "Tools & Platforms": [
+      "Streamlit",
       "Git",
       "GitHub",
       "VS Code",
@@ -53,6 +66,61 @@
     ]
   },
   "projects": [
+    {
+      "id": "neuroscan-ai-brain-tumor-detection",
+      "title": "NeuroScan AI — Brain Tumor Detection & Explainability",
+      "highlights": [
+        "Deep Learning",
+        "MobileNetV2",
+        "Grad-CAM (Explainable AI)",
+        "Transfer Learning",
+        "Streamlit Studio",
+        "4-Class MRI Diagnosis"
+      ],
+      "metrics": [
+        { "label": "Test Accuracy", "value": "86.12%" },
+        { "label": "Healthy Recall", "value": "99.00%" },
+        { "label": "Dataset Slices", "value": "7,200 Scans" },
+        { "label": "Explainability", "value": "Grad-CAM Heatmaps" }
+      ],
+      "githubUrl": "https://github.com/aditya001-001/Brain-Tumor-detection",
+      "problem": "Brain tumors—including infiltrative Gliomas, dural-based Meningiomas, and sellar Pituitary adenomas—are critical intracranial pathologies requiring rapid, accurate radiological evaluation. While Convolutional Neural Networks achieve impressive diagnostic accuracy, their black-box nature creates a barrier to clinical adoption because clinicians cannot trust predictions without understanding where the algorithm is focusing.",
+      "solution": "Built an end-to-end clinical deep learning system for 4-class intracranial tumor diagnosis from cranial MRI scans. Powered by a MobileNetV2 transfer-learning classifier with 86.12% test accuracy (99.0% healthy recall), integrated with mathematical Grad-CAM visual heatmaps that localize the lesion bed without requiring pixel-level annotation masks, and served through a real-time Streamlit diagnostic studio.",
+      "workflow": [
+        "Curated and validated a clinical dataset of 7,200 brain MRI slices divided across 4 classes (Glioma, Meningioma, Pituitary Adenoma, and Healthy Brain), maintaining an untouched 1,600-scan benchmark test set.",
+        "Engineered an anatomically safe data augmentation pipeline (RandomFlip, 5% rotation, 5% zoom) and scaled pixel intensities to [-1, 1] matching MobileNetV2 preprocessing standards.",
+        "Constructed a transfer learning architecture with a frozen ImageNet-pretrained MobileNetV2 base, tapping the final 'out_relu' layer (7x7x1280), followed by GlobalAveragePooling2D, BatchNormalization, and Dropout regularization heads.",
+        "Implemented mathematical Grad-CAM extracting class-specific gradients with respect to 'out_relu' feature maps, passing through ReLU to isolate positive tumor activations and superimposing Jet heatmaps onto grayscale MRIs (α=0.45).",
+        "Engineered a production-ready Streamlit Diagnostic Studio featuring sub-second model caching (@st.cache_resource), dual scan input (custom MRI slice upload or pre-loaded test cases), multi-class probability breakdown, and side-by-side saliency comparisons."
+      ],
+      "techStack": [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "MobileNetV2",
+        "Grad-CAM (XAI)",
+        "OpenCV",
+        "Streamlit",
+        "NumPy",
+        "Matplotlib",
+        "Scikit-learn"
+      ],
+      "features": [
+        "4-Class Intracranial Classification: Accurately differentiates between Glioma, Meningioma, Pituitary Adenoma, and Healthy Brain (No Tumor).",
+        "High Clinical Sensitivity: Achieves 99.0% recall on healthy brain scans and virtually 0% false negative rate for tumor presence.",
+        "Zero-Annotation Tumor Localization: Generates spatial Grad-CAM heatmaps pinpointing lesion beds without requiring expensive pixel-level segmentation masks.",
+        "Empirical Performance Gain: Retrained on full clinical data to elevate test accuracy from 82.19% baseline to 86.12% (+3.93%) with -0.0885 categorical loss reduction.",
+        "Interactive Diagnostic Studio: Streamlit web dashboard with instant MRI inference, probability bars, pure heatmaps, and side-by-side radiological overlays."
+      ],
+      "challenges": [
+        "Resolving visual ambiguity between infiltrative intra-axial gliomas and well-circumscribed extra-axial meningiomas without spatial segmentation masks.",
+        "Eliminating false alarms on healthy intracranial scans while ensuring high sensitivity (99.25% recall) for deep skull base pituitary lesions."
+      ],
+      "futureImprovements": [
+        "Extending classification to 3D volumetric MRI scans (NIfTI / multi-slice axial sequences).",
+        "Integrating automated radiological impression reporting using multimodal Vision-Language Models (VLMs)."
+      ]
+    },
     {
       "id": "youtube-rag-chatbot",
       "title": "YouTube Video RAG Chatbot",
@@ -63,6 +131,12 @@
         "Gemini AI",
         "Retrieval-Augmented Generation",
         "Semantic Search"
+      ],
+      "metrics": [
+        { "label": "Architecture", "value": "LangChain RAG" },
+        { "label": "Vector Store", "value": "FAISS Index" },
+        { "label": "LLM Engine", "value": "Gemini AI" },
+        { "label": "Retrieval", "value": "Dense Semantic" }
       ],
       "githubUrl": "https://github.com/aditya001-001/youtube-rag-chatbot",
       "problem": "Extracting key insights or getting specific answers from long video lectures and tutorials is time-consuming and inefficient.",
@@ -104,6 +178,12 @@
         "Feature Engineering",
         "Streamlit UI",
         "TMDb API"
+      ],
+      "metrics": [
+        { "label": "Model Type", "value": "Content-Based" },
+        { "label": "Similarity Metric", "value": "Cosine Similarity" },
+        { "label": "Data Source", "value": "TMDb 5000 Movies" },
+        { "label": "Interface", "value": "Streamlit App" }
       ],
       "githubUrl": "https://github.com/aditya001-001/MOVIE_RECOMMENDATION_SYSTEM",
       "problem": "With thousands of movies available online, users struggle to find relevant titles that match their specific tastes, leading to choice paralysis.",

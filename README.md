@@ -58,7 +58,7 @@ npm run deploy
 My_Portfolio/
 │
 ├── public/                 # Static assets
-│   ├── 01_Aditya_Sarapure.pdf
+│   ├── 01_Aditya_Chidanand_Sarapure.pdf
 │   ├── oracle_data_science_certificate.pdf
 │   ├── Udemy_AI.pdf
 │   ├── Pyspider_DS.pdf

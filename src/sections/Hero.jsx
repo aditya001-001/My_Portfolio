@@ -102,8 +102,8 @@ export default function Hero({ personalInfo }) {
         >
           {/* Download Resume */}
           <a
-            href={`${import.meta.env.BASE_URL}${personalInfo.resumePdf || '01_Aditya_Sarapure.pdf'}`}
-            download="Aditya_Sarapure_Resume.pdf"
+            href={`${import.meta.env.BASE_URL}${personalInfo.resumePdf || '01_Aditya_Chidanand_Sarapure.pdf'}`}
+            download="01_Aditya_Chidanand_Sarapure.pdf"
             className="flex items-center space-x-2 px-6 py-3 bg-apple-blue hover:bg-apple-blue-hover text-white rounded-full transition-all duration-300 font-medium shadow-sm hover:shadow-apple-card hover:scale-[1.02]"
           >
             <FileDown size={18} />
